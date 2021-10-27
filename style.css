@@ -12,6 +12,13 @@ header{
     background: #76604b;
     color: #ffffff;
     align-items: end;
+    margin: 0 auto;
+    width: 90%;
+}
+
+main{
+    margin: 0 auto;
+    width: 90%;
 }
 
 header div:nth-child(2){
@@ -36,9 +43,6 @@ header div:nth-child(2){
 
 #menu div:nth-child(1){
     width:max-content;
-   /*  border: 1px solid #ffffff;
-    border-radius: 25px;
-    padding: 2px; */
 }
 
 #menu div:nth-child(2){
@@ -78,15 +82,25 @@ header div:nth-child(2){
     font-size: 13px;
 }
 
-.lable{
+label{
     width: 22px;
     height: 20px;
-    color: #ffffff;
+   /*  color: #ffffff;
+    text-align: center; */
     border-radius: 10px;
-    background-color: darkcyan;
-    text-align: center;
+    background-color: #fff;
     margin-top: 70px;
 }
+
+input{
+    opacity: 0.8;
+}
+
+
+input:checked + label{
+    background-color: #19bd9a;
+}
+
 
 .section-about{
     display: grid;
@@ -133,6 +147,10 @@ header div:nth-child(2){
 
      .normal-text{
         display: none;
+    }
+
+    .grid-media div:nth-child(3){
+       display: none;
     }
 }
 /* ---------------------------------------
@@ -402,17 +420,17 @@ b{
 #section-wrapper{
     background-color: #f3f3f3;
     height: 370px;
-   
 }
+
 #section-wrapper span{
     color: #1bbc9b;
 }
 
-
 #icons img{
     width: 33px;
     height: 33px;
-    border-radius: 16px;
+    border-radius: 19px;
+    border: 2px solid #1bbc9b;
     background: grey;
 }
 
@@ -421,7 +439,7 @@ b{
     gap: 5px;
     grid-template-columns:80px 120px 1fr 1fr 80px ;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-/*    width: 80%; */
+   width: 105%;
    justify-items: center;
 }
 
@@ -433,7 +451,6 @@ b{
 .grid-media div:nth-child(2){
     grid-column: 3/4;
     grid-row: 1/4;
-
 }
 
 .grid-media div:nth-child(3){
@@ -538,6 +555,33 @@ b{
 
 .clubLogo img{
     height: 250px;
+    position: relative;
+    top: -40px;
+}
+
+@media(max-width:962px){
+    #section-dark{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr  1fr;
+        background: #252525;
+        color: #f3f3f3;
+        line-height: 1.5;
+    }
+
+    .textOnBlack{
+        display: none;
+    }
+
+    .clubLogo{
+        margin-top: -120px;
+    }
+}
+
+@media(max-width:767px){
+    .clubLogo{
+        display: none;
+    }
 }
 
 .clubLogo {
@@ -553,7 +597,7 @@ b{
 .clubLogo div:nth-child(2){
     grid-column:2/3;
     grid-row: 1/2;
-    opacity: 0.5;
+    opacity: 0.4;
     margin-bottom: 80px;
 }
 
@@ -577,7 +621,7 @@ b{
 
 #section-interesting{
     background-color: #f3f3f3;
-    height: 1480px;
+    height:1270px;
 }
 
 #nav a{
@@ -594,15 +638,75 @@ b{
 }
 
 #container-pictures{
-    margin-top: 20px;
+   /*  margin-top: 20px; */
     display: grid;
-    gap: 10px;
+    gap: 3px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:5% 1fr 1fr 1fr 10%;
+    grid-template-rows:9% 102% 14%;
     justify-items: center;
-   justify-self: center;
-   width: 80%;
-   margin: 0 auto;
+    justify-self: center;
+    width: 66%;
+    margin-left: 47px;
+}
+
+@media(max-width:962px){
+    #section-interesting{
+        height:600px;
+    }
+
+    .one-column-pict, .three-column-pict, .two-column-pict, .four-column-pict {
+       display: none;  
+    }
+
+    .last-pictures{
+        width: 125%;
+        height: 60px;
+    }
+}
+
+@media(max-width:850px){
+    #nav a{
+        text-decoration: none; 
+        color: #525252;
+        font-size: 12px;
+        margin: 5px;
+        border-bottom: 2px solid #19bd9a;
+        padding-bottom: 5px;
+    }
+
+    .last-pictures{
+        width: 125%;
+        height: 60px;
+    }
+}
+
+@media(max-width:767px){
+    .position-color div:nth-child(1){
+        display: none;
+    }
+
+    #nav a{
+        text-decoration: none; 
+        color: #525252;
+        font-size: 9px;
+        margin: 5px;
+        border-bottom: 1px solid #19bd9a;
+        padding-bottom: 2px;
+    }
+
+    #section-interesting{
+        height:300px;
+    }
+
+    .last-pictures{
+        width: 100%;
+        height: 40px;
+    }
+}
+
+.one-column-pict, .three-column-pict, .two-column-pict, .four-column-pict {
+    width: 200px;
+    height: 600px;    
 }
 
 #container-pictures div:nth-child(1){
@@ -612,6 +716,7 @@ b{
 
 #container-pictures div:nth-last-child(1){
     grid-column: 1/-1;
+    grid-row: 3/4;
 }
 
 .last-pictures{
@@ -620,11 +725,10 @@ b{
 }
 
 #container-pictures  img{
-    width: 214px;
-    height: 350px;
+    width:99%;
 }
 
-.position-color{
+.position-color {
     background-color: #19bd9a;
     height: 100%;
     text-align: center;
@@ -635,9 +739,7 @@ b{
     display: grid;
     grid-template-columns: 2fr;
 }
-
-
-
+/* ------------------------------------------------------------- */
 /* the team */
 #grid-template-areas{
     display: grid;
@@ -672,6 +774,16 @@ b{
     width: 45%;
     height: auto;
     color: #81858e;
+}
+@media(max-width:650px){
+    .summary,.circle{
+        display: none;
+    }
+
+    #grid-template-areas{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 .summary>*:nth-child(1){
@@ -794,7 +906,6 @@ b{
 }
  */
  
-
   #contact-us{
     font-size: 12px;
     color: #ffffff;
@@ -906,6 +1017,16 @@ b{
     gap: 5px;
 }
 
+@media(max-width:650px){
+    #black-fon{
+        height: 300px;
+    }
+
+    .expand-text{
+        display: none;
+    }
+}
+
 .heading-on-black{
     font-size: 14px;
     color: #fff;
@@ -979,6 +1100,24 @@ b{
     justify-items: center;
 }
 
+@media(max-width:650px){
+    .package-of-services{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 40%;
+        gap: 2px;
+        
+    }
+
+    #price{
+        height: 650px;
+    }
+
+    .green-inf_3{
+        display: none;
+    }
+}
+
 .package-of-services div:nth-child(2){
     font-size: 11px;
 }
@@ -1030,10 +1169,6 @@ b{
     text-align: center;
 }
 
-
-
-
-
 /* -------------------------- */
 #contact-on-the-light{
     background-color: #f3f3f3;
@@ -1069,6 +1204,30 @@ b{
     font-size: 12px;
     text-align: center;
     line-height: 1.5;
+}
+
+@media(max-width:650px){
+    .box-info2{
+        width: 80px;
+        height: 100px;  
+    }
+
+    .wrapper-of-black-img{
+       width: 14%;
+    }
+
+    .black-img{
+        height: 40%;
+    }
+
+   .del-box{
+       display: none;
+   }
+
+   #contact-on-the-light{
+    background-color: #f3f3f3;
+    height:250px;
+}
 }
 /* -------------------------- */
 
