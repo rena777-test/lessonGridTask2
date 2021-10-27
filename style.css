@@ -977,6 +977,15 @@ b{
     padding: 14px;
 }
 
+@media(max-width:650px){
+    
+.testim-s{
+    display: grid;
+    grid-template-columns: 20% 59%;
+    grid-template-rows: 1fr 50px;
+}
+}
+
 .testim-s div:nth-child(1){
     justify-self: center;
 }
@@ -1267,8 +1276,21 @@ b{
 
 @media(max-width:650px){
     #buttons-on-empty input{
-        width: 108px;
+        width: 39px;
+        height: 10px;
+        font-size: 8px;
       
+    }
+
+    #buttons-on-empty  textarea{
+        grid-column: 1/-1;
+        width: 40%;
+        height: 10%;
+        border: 2px solid red;
+    }
+
+    .with-color{
+        font-size: 10px;
     }
 }
 
