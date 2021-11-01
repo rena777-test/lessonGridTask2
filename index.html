@@ -7,17 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LessonGridTask2</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        window.onload = init;
-
-        function init() {
-            let img = document.getElementById("imgs");
-            /*  console.log(img.children); */
-            img.addEventListener("click", function (e) {
-                e.target.style.background = "#19bd9a";
-            });
-        }
-    </script>
 </head>
 
 <body>
@@ -42,8 +31,8 @@
             <div>Lorem ipsum dolor sit amet quibusdamconsectetur adipisicing elit.
                 Corrupti excepturi quibusdam hic dicta fuga!</div>
                 <div>
-                    <input id="check" type="checkbox">
-                    <label for="check"></label>
+                    <input id="arrow-to-down" type="checkbox">
+                    <label class="btn-green" for="arrow-to-down"></label>
                 </div>
         </div>
         <div class="section-about">
@@ -53,7 +42,7 @@
                 molestiae, provident neque cumque ipsa, totam corrupti aspernatur ducimus,
                 eaque doloribus optio illum?
             </div>
-            <button>Read More</button>
+            <button class="btn-on-white">Read More</button>
             <img src="./imgs/sportClab.jpg" alt="">
         </div>
         <div id="section-details">
@@ -63,10 +52,10 @@
                     consectetur adipisicing elit.
                 </div>
             </div>
-            <div id="imgs" class="grid-inside">
-                <div><img src="./imgs/heart.png" alt=""></div>
-                <div><img src="./imgs/nut.png" alt=""></div>
-                <div><img src="./imgs/bulb.png" alt=""></div>
+            <div class="grid-inside">
+                <div class="d-im"><img src="./imgs/heart2.png" alt=""></div>
+                <div class="d-im"><img src="./imgs/mouse.png" alt=""></div>
+                <div class="d-im"><img src="./imgs/bulb.png" alt=""></div>
             </div>
 
             <div class="block-of-text-to-the-left">
@@ -99,7 +88,7 @@
             <div class="textAndButton">
                 <div class="opacityDiv">
                     <div>
-                        <p>At vero eos <span>accusamus</span> orem ipsum dolor, amet consectetur adipisicing elit sit
+                        <p>At vero eos at accusamus orem ipsum dolor, amet consectetur adipisicing elit sit
                         </p>
                     </div>
                     <div> <button class="border-radius2">Submit Now</button></div>
@@ -115,32 +104,38 @@
                 </div>
             </div>
             <div class="grid-media">
-                <div id="icons">
-                    <div><img src="./imgs/pen.png" alt=""></div>
-                    <div><img src="./imgs/massege.jpg" alt=""></div>
-                    <div><img src="./imgs/gostik.png" alt=""></div>
-                    <div><img src="./imgs/rozetka.png" alt=""></div>
+                <div>
+                    <div class="d-im ss"><img  src="./imgs/pen.png" alt=""></div>
+                    <div class="d-im ss"><img  src="./imgs/valik.png" alt=""></div>
+                    <div class="d-im ss"><img  src="./imgs/gostik.png" alt=""></div>
+                    <div class="d-im ss"><img  src="./imgs/vilka2.png" alt=""></div>
                 </div>
                 <div class="inner-block-of-text">
                     <div class="heading-middle">Craphic Design</div>
                     <div class="normal-text marg">
                         At vero eos orem ipsum at <span>justo</span> dolor, amet consectetur amet consectetur
-                        <b>ducimus</b>
+                        <b>ducimus</b> consectetur adipisicing elit.At vero consectetur adipisicing elit.At vero eos 
                         adipisicing elit sit amet elit.
                     </div>
                     <div class="normal-text marg">
                         amet adipisicing elit .At vero eos orem ipsum dolor,
                         consectetur adipisicing elit.At vero eos orem ipsum dolor, amet <span>consectetur amet</span>
-                        consectetur
+                        consectetur consectetur  consectetur adipisicing elit.At vero eos orem ipsum adipisicing elit.At vero eos orem ipsum .
                     </div>
                 </div>
                 <div class="inner-block-of-elem">
+                   <section>
                     <div class="big-mug">80%</div>
+                    <div class="normal-text  marg">Branding</div>
+                   </section>
+                   <section>
                     <div class="big-mug">75%</div>
+                    <div class="normal-text marg">Web Design</div>
+                   </section>
+                   <section>
                     <div class="big-mug">60%</div>
-                    <div class="normal-text">Branding</div>
-                    <div class="normal-text">Web Design</div>
-                    <div class="normal-text">UI/UX</div>
+                    <div class="normal-text marg">UI/UX</div>
+                   </section>
                 </div>
             </div>
         </div>
